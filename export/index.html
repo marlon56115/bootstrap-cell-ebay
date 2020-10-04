@@ -39,29 +39,31 @@
         <div class="row">
             <div class="col align-self-center col-6 d-lg-none" id="filtrosComboBox"><label style="font-size: 13px;">Ordenar por:&nbsp;</label><select class="custom-select w-50 mx-auto"><optgroup label="Ordenar"><option value="Precio" selected="">Precio</option><option value="Fecha">Fecha</option></optgroup></select></div>
             <div
-                class="col offset-3 align-self-center col-lg-5 d-none d-lg-inline rounded" id="ordenPrecio">
+                class="col offset-3 align-self-center col-lg-7 d-none d-lg-inline" id="ordenPrecio">
                 <form class="form-inline">
-                    <div class="form-row" style="text-align: center;">
-                        <div class="col col-6">
-                            <div class="form-group"><label for="precio">Precio:&nbsp;</label><input class="form-control w-50" type="number" id="precio" placeholder="$"></div>
+                    <div class="form-row row-cols-3">
+                        <div class="col" id="precioDesde">
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend"><label class="input-group-text" for="precio" style="font-size: 12px;">Precio</label></div><input class="form-control form-control-sm w-50" type="number" id="precio" placeholder="$"></div>
                         </div>
-                        <div class="col col-6">
-                            <div class="form-group"><label for="precio">Hasta:&nbsp;</label><input class="form-control w-50" type="number" id="precio" placeholder="$"></div>
+                        <div class="col" id="precioHasta">
+                            <div class="input-group">
+                                <div class="input-group-prepend"><label class="input-group-text" for="precio" style="font-size: 12px;">Hasta</label></div><input class="form-control form-control-sm w-50" type="number" id="precio" placeholder="$"></div>
                         </div>
+                        <div class="col"><label class="d-inline">Ordenar por:&nbsp;</label><button class="btn btn-secondary btn-sm d-inline" type="button"><i class="fa fa-arrow-up" id="flechaArriba"></i><i class="fa fa-arrow-down" id="flechaAbajo"></i>&nbsp;Precio</button></div>
                     </div>
                 </form>
         </div>
-        <div class="col align-self-center col-lg-4 d-none d-lg-inline rounded" id="ordenFecha"><label>Ordenar por:&nbsp;</label><button class="btn btn-primary mx-3" type="button"><i class="fa fa-arrow-up" id="flechaArriba"></i><i class="fa fa-arrow-down" id="flechaAbajo"></i>&nbsp;Precio</button><button class="btn btn-primary my-3" type="button"><i class="fa fa-calendar-times-o"></i>&nbsp;Fecha</button></div>
-        <div
-            class="col col-6 col-lg-2 rounded" id="filtros">
-            <div><a class="btn btn-primary d-lg-none" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button"><i class="fa fa-filter"></i></a>
+        <div class="col align-self-center col-lg-2 d-none d-lg-inline" id="ordenFecha"><button class="btn btn-secondary btn-sm my-3" type="button"><i class="fa fa-calendar-times-o"></i>&nbsp;Fecha</button></div>
+        <div class="col col-6 col-lg-2 rounded" id="filtros">
+            <div><a class="btn btn-dark d-lg-none" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button"><i class="fa fa-filter"></i></a>
                 <div class="collapse d-lg-block" id="collapse-1">
                     <div class="col">
                         <div class="row row-cols-1">
-                            <div class="col border rounded" id="nuevo" style="text-align: center;">
+                            <div class="col border rounded bg-white" id="nuevo" style="text-align: center;">
                                 <div class="custom-control custom-switch my-3"><input type="checkbox" id="switch1" class="custom-control-input"><label class="custom-control-label" for="switch1">Nuevo</label></div>
                             </div>
-                            <div class="col border rounded" id="marcas">
+                            <div class="col border rounded bg-white" id="marcas">
                                 <p class="card-title ml-sm-3 mt-2">Marcas</p>
                                 <div class="custom-control custom-checkbox my-1 ml-sm-3"><input type="checkbox" id="marca1" class="custom-control-input"><label class="custom-control-label" for="marca1">Samsung<span class="badge badge-primary ml-1">15</span></label></div>
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="marca2" class="custom-control-input"><label class="custom-control-label" for="marca2">Huawei<span class="badge badge-primary ml-1">10</span></label></div>
@@ -69,13 +71,13 @@
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="marca4" class="custom-control-input"><label class="custom-control-label" for="marca4">Iphone<span class="badge badge-primary ml-1">4</span></label></div>
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="marca5" class="custom-control-input"><label class="custom-control-label" for="marca5">Xiaomi<span class="badge badge-primary ml-1">4</span></label></div>
                             </div>
-                            <div class="col border rounded" id="sistemas">
+                            <div class="col border rounded bg-white" id="sistemas">
                                 <p class="card-title mt-2 ml-sm-3">Sistemas</p>
                                 <div class="custom-control custom-checkbox mb-1 mt-1 ml-sm-3"><input type="checkbox" id="sistema1" class="custom-control-input"><label class="custom-control-label" for="sistema1">Android<span class="badge badge-primary ml-1">10</span></label></div>
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="sistema2" class="custom-control-input"><label class="custom-control-label" for="sistema2">Windows<span class="badge badge-primary ml-1">10</span></label></div>
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="sistema3" class="custom-control-input"><label class="custom-control-label" for="sistema3">IOS<span class="badge badge-primary ml-1">56</span></label></div>
                             </div>
-                            <div class="col border rounded" id="pantallas">
+                            <div class="col border rounded bg-white" id="pantallas">
                                 <p class="card-title mt-2 ml-sm-3">Pantalla</p>
                                 <div class="custom-control custom-checkbox mb-1 mt-1 ml-sm-3"><input type="checkbox" id="pantalla1" class="custom-control-input"><label class="custom-control-label" for="pantalla1">6.0</label></div>
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="pantalla2" class="custom-control-input"><label class="custom-control-label" for="pantalla2">5.5</label></div>
@@ -85,184 +87,104 @@
                     </div>
                 </div>
             </div>
-            </div>
-            <div class="col col-12 col-lg-10 rounded" id="productos">
-                <div class="row row-cols-lg-4 row-cols-md-3 row-cols-2">
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
+        </div>
+        <div class="col col-12 col-lg-10 rounded" id="productos">
+            <div class="row row-cols-lg-4 row-cols-md-3 row-cols-2">
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
+                            <p><strong>$132.00</strong><br></p>
+                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
+                            <a class="card-link" href="anuncio.html" target="_blank">
+                                <p>Samsung Galaxy J6</p>
+                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
                     </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
+                </div>
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
+                            <p><strong>$132.00</strong><br></p>
+                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
+                            <a class="card-link" href="anuncio.html" target="_blank">
+                                <p>Samsung Galaxy J6</p>
+                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
                     </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
+                </div>
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
+                            <p><strong>$132.00</strong><br></p>
+                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
+                            <a class="card-link" href="anuncio.html" target="_blank">
+                                <p>Samsung Galaxy J6</p>
+                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
                     </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
+                </div>
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
+                            <p><strong>$132.00</strong><br></p>
+                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
+                            <a class="card-link" href="anuncio.html" target="_blank">
+                                <p>Samsung Galaxy J6</p>
+                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
                     </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
+                </div>
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
+                            <p><strong>$132.00</strong><br></p>
+                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
+                            <a class="card-link" href="anuncio.html" target="_blank">
+                                <p>Samsung Galaxy J6</p>
+                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
                     </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
+                </div>
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
+                            <p><strong>$132.00</strong><br></p>
+                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
+                            <a class="card-link" href="anuncio.html" target="_blank">
+                                <p>Samsung Galaxy J6</p>
+                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
                     </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
+                </div>
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
+                            <p><strong>$132.00</strong><br></p>
+                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
+                            <a class="card-link" href="anuncio.html" target="_blank">
+                                <p>Samsung Galaxy J6</p>
+                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
                     </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
+                </div>
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
+                            <p><strong>$132.00</strong><br></p>
+                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
+                            <a class="card-link" href="anuncio.html" target="_blank">
+                                <p>Samsung Galaxy J6</p>
+                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
                     </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
-                    </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
-                    </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
-                    </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
-                    </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
-                    </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
-                    </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
-                    </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
-                    </div>
-                    <div class="col mt-3">
-                        <div class="card">
-                            <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                                <p><strong>$132.00</strong><br></p>
-                                <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                                <a class="card-link" href="anuncio.html" target="_blank">
-                                    <p>Samsung Galaxy J6</p>
-                                </a><button class="btn btn-primary btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                        </div>
+                </div>
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
+                            <p><strong>$132.00</strong><br></p>
+                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
+                            <a class="card-link" href="anuncio.html" target="_blank">
+                                <p>Samsung Galaxy J6</p>
+                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
+        </div>
     </main>
-    <div class="row text-center ml-1 my-4" id="footer">
+    <div class="row text-center ml-1 my-4 container" id="footer">
         <div class="col text-center col-lg-8 col-md-6 col-sm-12" id="paginacion">
             <nav>
                 <ul class="pagination justify-content-center">
@@ -506,7 +428,7 @@
     </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
     <script src="assets/js/scriptsGraficas.js"></script>
 </body>
 
