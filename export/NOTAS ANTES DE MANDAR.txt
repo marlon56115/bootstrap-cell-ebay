@@ -1,0 +1,3 @@
+Añadir que se descolapse el menu cuando se abra el modal
+compilar sass para cssc con colores
+borrar los scripts de index y anuncio

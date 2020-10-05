@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -28,18 +27,42 @@
                         <li class="nav-item my-md-auto" style="text-align: center;"><a class="nav-link active text-light" href="index.html">Inicio</a></li>
                         <li class="nav-item my-auto mx-lg-5" style="text-align: center;"><a class="nav-link text-light" href="estadisticas.html">Estadisticas</a></li>
                         <li class="nav-item mx-md-3 d-none d-md-inline mx-lg-3" style="text-align: center;"><a class="nav-link" onclick="$('#modalNuevoAnuncio').modal('show');"><i class="fa fa-plus-circle" style="font-size: 35px;"></i></a></li>
-                        <li class="nav-item mx-md-3 d-none d-md-inline mx-lg-2" style="text-align: center;"><a class="nav-link" href="#"><i class="fa fa-shopping-cart mx-lg-2" style="font-size: 35px;"></i><span class="badge badge-primary">42</span></a></li>
+                        <li class="nav-item mx-md-3 d-none d-md-inline mx-lg-2" style="text-align: center;"><a class="nav-link" href="#"><i class="fa fa-shopping-cart mx-lg-2" style="font-size: 35px;"></i><span class="badge badge-danger">42</span></a></li>
                         <li class="nav-item my-auto mx-md-3 d-md-none" style="text-align: center;"><a class="nav-link text-light" href="#">Carrito</a></li>
                         <li class="nav-item my-auto mx-md-3 d-md-none" style="text-align: center;"><a class="nav-link text-light" onclick="$('#modalNuevoAnuncio').modal('show');">Nuevo Anuncio</a></li>
                     </ul>
                 </div>
         </div>
-    </nav>
+    </nav><div id="toastCArrito" class="toast  collapse" data-autohide="true" data-delay="1500" 
+    style="position: fixed; top:5rem; right:1rem;z-index: 2; min-width: 5rem;">
+    <div class="toast-header bg-primary text-white" >
+        <img src="assets/img/shop.png" class="rounded mr-2 " alt="...">
+        <strong class="mr-auto">Notificacion</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <div class="toast-body">
+      <strong>Articulo añadido al carrito</strong>  
+    </div>
+</div><div id="toastAnuncio" class="toast  collapse" data-autohide="true" data-delay="1500" 
+    style="position: fixed; top:4rem; right:1rem;z-index: 1500; min-width: 5rem;">
+    <div class="toast-header bg-primary text-white" >
+        <img src="assets/img/notificacion.png" class="rounded mr-2 " alt="...">
+        <strong class="mr-auto">Notificacion</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <div class="toast-body">
+      <strong>Anuncio añadido con exito</strong>  
+    </div>
+</div>
     <main id="principal" class="container-fluid bg-light pt-4 mt-5">
         <div class="row">
             <div class="col align-self-center col-6 d-lg-none" id="filtrosComboBox"><label style="font-size: 13px;">Ordenar por:&nbsp;</label><select class="custom-select w-50 mx-auto"><optgroup label="Ordenar"><option value="Precio" selected="">Precio</option><option value="Fecha">Fecha</option></optgroup></select></div>
             <div
-                class="col offset-3 align-self-center col-lg-7 d-none d-lg-inline" id="ordenPrecio">
+                class="col offset-3 align-self-center col-lg-9 d-none d-lg-inline" id="ordenPrecio">
                 <form class="form-inline">
                     <div class="form-row row-cols-3">
                         <div class="col" id="precioDesde">
@@ -51,10 +74,8 @@
                                 <div class="input-group-prepend"><label class="input-group-text" for="precio" style="font-size: 12px;">Hasta</label></div><input class="form-control form-control-sm w-50" type="number" id="precio" placeholder="$"></div>
                         </div>
                         <div class="col"><label class="d-inline">Ordenar por:&nbsp;</label><button class="btn btn-secondary btn-sm d-inline" type="button"><i class="fa fa-arrow-up" id="flechaArriba"></i><i class="fa fa-arrow-down" id="flechaAbajo"></i>&nbsp;Precio</button></div>
-                    </div>
-                </form>
+                    </div><button class="btn btn-secondary btn-sm text-left my-3 d-inline" id="filtroFecha" type="button"><i class="fa fa-calendar-times-o"></i>&nbsp;Fecha</button></form>
         </div>
-        <div class="col align-self-center col-lg-2 d-none d-lg-inline" id="ordenFecha"><button class="btn btn-secondary btn-sm my-3" type="button"><i class="fa fa-calendar-times-o"></i>&nbsp;Fecha</button></div>
         <div class="col col-6 col-lg-2 rounded" id="filtros">
             <div><a class="btn btn-dark d-lg-none" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button"><i class="fa fa-filter"></i></a>
                 <div class="collapse d-lg-block" id="collapse-1">
@@ -63,7 +84,7 @@
                             <div class="col border rounded bg-white" id="nuevo" style="text-align: center;">
                                 <div class="custom-control custom-switch my-3"><input type="checkbox" id="switch1" class="custom-control-input"><label class="custom-control-label" for="switch1">Nuevo</label></div>
                             </div>
-                            <div class="col border rounded bg-white" id="marcas">
+                            <div class="col border rounded" id="marcas">
                                 <p class="card-title ml-sm-3 mt-2">Marcas</p>
                                 <div class="custom-control custom-checkbox my-1 ml-sm-3"><input type="checkbox" id="marca1" class="custom-control-input"><label class="custom-control-label" for="marca1">Samsung<span class="badge badge-primary ml-1">15</span></label></div>
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="marca2" class="custom-control-input"><label class="custom-control-label" for="marca2">Huawei<span class="badge badge-primary ml-1">10</span></label></div>
@@ -71,13 +92,13 @@
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="marca4" class="custom-control-input"><label class="custom-control-label" for="marca4">Iphone<span class="badge badge-primary ml-1">4</span></label></div>
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="marca5" class="custom-control-input"><label class="custom-control-label" for="marca5">Xiaomi<span class="badge badge-primary ml-1">4</span></label></div>
                             </div>
-                            <div class="col border rounded bg-white" id="sistemas">
+                            <div class="col border rounded" id="sistemas">
                                 <p class="card-title mt-2 ml-sm-3">Sistemas</p>
                                 <div class="custom-control custom-checkbox mb-1 mt-1 ml-sm-3"><input type="checkbox" id="sistema1" class="custom-control-input"><label class="custom-control-label" for="sistema1">Android<span class="badge badge-primary ml-1">10</span></label></div>
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="sistema2" class="custom-control-input"><label class="custom-control-label" for="sistema2">Windows<span class="badge badge-primary ml-1">10</span></label></div>
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="sistema3" class="custom-control-input"><label class="custom-control-label" for="sistema3">IOS<span class="badge badge-primary ml-1">56</span></label></div>
                             </div>
-                            <div class="col border rounded bg-white" id="pantallas">
+                            <div class="col border rounded" id="pantallas">
                                 <p class="card-title mt-2 ml-sm-3">Pantalla</p>
                                 <div class="custom-control custom-checkbox mb-1 mt-1 ml-sm-3"><input type="checkbox" id="pantalla1" class="custom-control-input"><label class="custom-control-label" for="pantalla1">6.0</label></div>
                                 <div class="custom-control custom-checkbox mb-1 ml-sm-3"><input type="checkbox" id="pantalla2" class="custom-control-input"><label class="custom-control-label" for="pantalla2">5.5</label></div>
@@ -97,7 +118,7 @@
                             <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
                             <a class="card-link" href="anuncio.html" target="_blank">
                                 <p>Samsung Galaxy J6</p>
-                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
+                            </a><button class="btn btn-outline-danger btn-block btn-carrito" type="button" onclick="alertaCarritoAdd();"><i class="fa fa-shopping-cart mr-1" ></i>Agregar al carrito</button></div>
                     </div>
                 </div>
                 <div class="col mt-3">
@@ -107,7 +128,7 @@
                             <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
                             <a class="card-link" href="anuncio.html" target="_blank">
                                 <p>Samsung Galaxy J6</p>
-                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
+                            </a><button class="btn btn-outline-danger btn-block btn-carrito" type="button" onclick="alertaCarritoAdd();"><i class="fa fa-shopping-cart mr-1" ></i>Agregar al carrito</button></div>
                     </div>
                 </div>
                 <div class="col mt-3">
@@ -117,7 +138,7 @@
                             <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
                             <a class="card-link" href="anuncio.html" target="_blank">
                                 <p>Samsung Galaxy J6</p>
-                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
+                            </a><button class="btn btn-outline-danger btn-block btn-carrito" type="button" onclick="alertaCarritoAdd();"><i class="fa fa-shopping-cart mr-1" ></i>Agregar al carrito</button></div>
                     </div>
                 </div>
                 <div class="col mt-3">
@@ -127,7 +148,7 @@
                             <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
                             <a class="card-link" href="anuncio.html" target="_blank">
                                 <p>Samsung Galaxy J6</p>
-                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
+                            </a><button class="btn btn-outline-danger btn-block btn-carrito" type="button" onclick="alertaCarritoAdd();"><i class="fa fa-shopping-cart mr-1" ></i>Agregar al carrito</button></div>
                     </div>
                 </div>
                 <div class="col mt-3">
@@ -137,7 +158,7 @@
                             <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
                             <a class="card-link" href="anuncio.html" target="_blank">
                                 <p>Samsung Galaxy J6</p>
-                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
+                            </a><button class="btn btn-outline-danger btn-block btn-carrito" type="button" onclick="alertaCarritoAdd();"><i class="fa fa-shopping-cart mr-1" ></i>Agregar al carrito</button></div>
                     </div>
                 </div>
                 <div class="col mt-3">
@@ -147,45 +168,15 @@
                             <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
                             <a class="card-link" href="anuncio.html" target="_blank">
                                 <p>Samsung Galaxy J6</p>
-                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                    </div>
-                </div>
-                <div class="col mt-3">
-                    <div class="card">
-                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                            <p><strong>$132.00</strong><br></p>
-                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                            <a class="card-link" href="anuncio.html" target="_blank">
-                                <p>Samsung Galaxy J6</p>
-                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                    </div>
-                </div>
-                <div class="col mt-3">
-                    <div class="card">
-                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                            <p><strong>$132.00</strong><br></p>
-                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                            <a class="card-link" href="anuncio.html" target="_blank">
-                                <p>Samsung Galaxy J6</p>
-                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
-                    </div>
-                </div>
-                <div class="col mt-3">
-                    <div class="card">
-                        <div class="card-body" style="text-align: center;"><a class="card-link" href="anuncio.html" target="_blank"><img class="card-img-top" src="assets/img/j6.png" alt="Galaxy J6"></a>
-                            <p><strong>$132.00</strong><br></p>
-                            <p class="card-subtitle text-muted" style="font-size: 13px;"><span style="text-decoration: line-through;">$200.00</span></p>
-                            <a class="card-link" href="anuncio.html" target="_blank">
-                                <p>Samsung Galaxy J6</p>
-                            </a><button class="btn btn-outline-danger btn-block" type="button"><i class="fa fa-shopping-cart mr-1"></i>Agregar al carrito</button></div>
+                            </a><button class="btn btn-outline-danger btn-block btn-carrito" type="button" onclick="alertaCarritoAdd();"><i class="fa fa-shopping-cart mr-1" ></i>Agregar al carrito</button></div>
                     </div>
                 </div>
             </div>
         </div>
         </div>
     </main>
-    <div class="row text-center ml-1 my-4 container" id="footer">
-        <div class="col text-center col-lg-8 col-md-6 col-sm-12" id="paginacion">
+    <div class="row ml-1 my-4 container" id="footer">
+        <div class="col offset-lg-5 col-lg-4 col-md-6 col-12" id="paginacion">
             <nav>
                 <ul class="pagination justify-content-center">
                     <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
@@ -201,7 +192,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="col col-lg-4 col-md-6 d-none d-md-inline" id="selector"><label>Artìculos por pàgina:</label><select class="custom-select w-25 mx-auto"><optgroup label="cantidad"><option value="5" selected="">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></optgroup></select></div>
+        <div class="col col-lg-3 col-md-6 d-none d-md-inline" id="selector"><label>Artìculos por pàgina:</label><select class="custom-select w-25 mx-auto"><optgroup label="cantidad"><option value="5" selected="">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></optgroup></select></div>
     </div><div role="dialog" tabindex="-1" class="modal fade " id="modalNuevoAnuncio">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
@@ -210,7 +201,7 @@
                     aria-label="Close"><span aria-hidden="true">×</span></button>
             </div>
             <div class="modal-body bg-light">
-                <form class="needs-validation" novalidate> 
+                <form class="needs-validation" onsubmit="return false;" novalidate> 
                     <!--row padre-->
                     <div class="form-row">
                         <!--form de estado del telefono-->
@@ -392,7 +383,7 @@
                         <!--form botones de guardar y cancelar-->
                         <div class="col-12 col-lg-5 p-lg-4 order-4 order-lg-4 align-self-center text-center  rounded ">
                             <button class="btn btn-outline-danger btn-lg mr-2" type="button" data-dismiss="modal"><i class="fa fa-close mr-1" ></i>Cancelar</button>
-                            <button class="btn btn-outline-success btn-lg" type="submit"><i class="fa fa-save mr-1" ></i>Crear</button>
+                            <button class="btn btn-outline-success btn-lg" type="submit"  onclick="alertaAnuncioAdd();"><i class="fa fa-save mr-1" ></i>Crear</button>
                         </div>
                     </div>
                 </form>
@@ -430,6 +421,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/Chart.min.js"></script>
     <script src="assets/js/scriptsGraficas.js"></script>
+    <script src="assets/js/toasts.js"></script>
 </body>
 
 </html>
