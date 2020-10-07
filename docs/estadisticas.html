@@ -104,7 +104,7 @@
                     aria-label="Close"><span aria-hidden="true">×</span></button>
             </div>
             <div class="modal-body bg-light">
-                <form class="needs-validation" onsubmit="return false;" novalidate> 
+                <form class="was-validated" novalidate> 
                     <!--row padre-->
                     <div class="form-row">
                         <!--form de estado del telefono-->
@@ -286,7 +286,7 @@
                         <!--form botones de guardar y cancelar-->
                         <div class="col-12 col-lg-5 p-lg-4 order-4 order-lg-4 align-self-center text-center  rounded ">
                             <button class="btn btn-outline-danger btn-lg mr-2" type="button" data-dismiss="modal"><i class="fa fa-close mr-1" ></i>Cancelar</button>
-                            <button class="btn btn-outline-success btn-lg" type="submit"  onclick="alertaAnuncioAdd();"><i class="fa fa-save mr-1" ></i>Crear</button>
+                            <button class="btn btn-outline-success btn-lg" type="button"  data-dismiss="modal" onclick="alertaAnuncioAdd();"><i class="fa fa-save mr-1" ></i>Crear</button>
                         </div>
                     </div>
                 </form>
