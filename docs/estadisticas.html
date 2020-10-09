@@ -1,347 +1,392 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>bootstrap cell tienda</title>
-    <link rel="icon" type="image/png" sizes="900x675" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>bootstrap cell tienda</title>
+        <link rel="icon" type="image/png" sizes="900x675" href="assets/img/favicon.png">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    </head>
 
-<body>
-    <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-dark bg-dark" id="navegacion">
-        <div class="container-fluid"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><i class="fab fa-android d-none d-lg-inline mr-2" style="font-size: 33px;color: rgb(154,157,160);"></i>
-            <a
-                class="navbar-brand d-none d-lg-inline" href="index.html">Tienda&nbsp; CellPhone</a>
+    <body>
+        <!--barra de navegacion-->
+        <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-dark bg-dark" id="navegacion">
+            <div class="container-fluid"><button data-toggle="collapse" class="navbar-toggler"
+                    data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                        class="navbar-toggler-icon"></span></button><i class="fab fa-android d-none d-lg-inline mr-2"
+                    style="font-size: 33px;color: rgb(154,157,160);"></i>
+                <a class="navbar-brand d-none d-lg-inline" href="index.html">Tienda&nbsp; CellPhone</a>
                 <form class="form-inline">
                     <div class="input-group">
-                        <div class="input-group-prepend"><button class="btn btn-light border btn-sm" type="button"><i class="fa fa-search"></i></button></div><input class="form-control form-control-sm" type="search" placeholder="Buscar"></div>
+                        <div class="input-group-prepend"><button class="btn btn-light border btn-sm" type="button"><i
+                                    class="fa fa-search"></i></button></div><input class="form-control form-control-sm"
+                            type="search" placeholder="Buscar">
+                    </div>
                 </form>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item my-auto mx-md-3 d-sm-inline d-md-none" style="text-align: center;"><i class="fab fa-android d-lg-none mr-1" style="font-size: 25px;color: rgb(154,157,160);"></i><a class="navbar-brand d-lg-none" href="index.html">Tienda&nbsp; CellPhone</a></li>
-                        <li class="nav-item my-md-auto" style="text-align: center;"><a class="nav-link active text-light" href="index.html">Inicio</a></li>
-                        <li class="nav-item my-auto mx-lg-5" style="text-align: center;"><a class="nav-link text-light" href="estadisticas.html">Estadisticas</a></li>
-                        <li class="nav-item mx-md-3 mx-lg-3 my-auto" style="text-align: center;"><a class="nav-link d-none d-md-inline " onclick="$('#modalNuevoAnuncio').modal('show');"><i class="fa fa-plus-circle" style="font-size: 35px;"></i>
-</a>
+                        <li class="nav-item my-auto mx-md-3 d-sm-inline d-md-none" style="text-align: center;"><i
+                                class="fab fa-android d-lg-none mr-1"
+                                style="font-size: 25px;color: rgb(154,157,160);"></i><a class="navbar-brand d-lg-none"
+                                href="index.html">Tienda&nbsp; CellPhone</a></li>
+                        <li class="nav-item my-md-auto" style="text-align: center;"><a
+                                class="nav-link active text-light" href="index.html">Inicio</a></li>
+                        <li class="nav-item my-auto mx-lg-5" style="text-align: center;"><a class="nav-link text-light"
+                                href="estadisticas.html">Estadisticas</a></li>
+                        <li class="nav-item mx-md-3 mx-lg-3 my-auto" style="text-align: center;"><a
+                                class="nav-link d-none d-md-inline " onclick="$('#modalNuevoAnuncio').modal('show');"><i
+                                    class="fa fa-plus-circle" style="font-size: 35px;"></i>
+                            </a>
 
-<a class="nav-link d-md-none text-light"  onclick="$('#modalNuevoAnuncio').modal('show');" >
-    Nuevo Anuncio 
-</a>
+                            <a class="nav-link d-md-none text-light" onclick="$('#modalNuevoAnuncio').modal('show');">
+                                Nuevo Anuncio
+                            </a>
 
-</li>
-                        <li class="nav-item mx-md-3 mx-lg-2" style="text-align: center;"><a class="nav-link d-md-none text-light" href="#">Carrito</a><a class="nav-link d-none d-md-inline" href="#"><i class="fa fa-shopping-cart mx-lg-2 d-none d-md-inline" style="font-size: 35px;"></i><span class="badge badge-primary d-none d-md-inline">42</span></a></li>
+                        </li>
+                        <li class="nav-item mx-md-3 mx-lg-2" style="text-align: center;"><a
+                                class="nav-link d-md-none text-light" href="#">Carrito</a><a
+                                class="nav-link d-none d-md-inline" href="#"><i
+                                    class="fa fa-shopping-cart mx-lg-2 d-none d-md-inline"
+                                    style="font-size: 35px;"></i><span
+                                    class="badge badge-primary d-none d-md-inline">42</span></a></li>
                     </ul>
                 </div>
-        </div>
-    </nav><div id="toastAnuncio" class="toast  collapse" data-autohide="true" data-delay="1500" 
-    style="position: fixed; top:4rem; right:1rem;z-index: 1500; min-width: 5rem;">
-    <div class="toast-header bg-primary text-white" >
-        <img src="assets/img/notificacion.png" class="rounded mr-2 " alt="...">
-        <strong class="mr-auto">Notificacion</strong>
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    <div class="toast-body">
-      <strong>Anuncio añadido con exito</strong>  
-    </div>
-</div><div role="dialog" tabindex="-1" class="modal fade " id="modalNuevoAnuncio">
-    <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Nuevo Anuncio</h4><button type="button" class="close" data-dismiss="modal"
-                    aria-label="Close"><span aria-hidden="true">×</span></button>
             </div>
-            <div class="modal-body bg-light">
-                <form class="was-validated" novalidate> 
-                    <!--row padre-->
-                    <div class="form-row">
-                        <!--form de estado del telefono-->
-                        <div class="col-12 col-lg-6 order-3 order-lg-1 order- p-md-4 ">
-                            <!--checkbox sin formgroup-->
-                            <div class="row my-2 form-group ">
-                                <div class="col-4 col-md-3">
-                                    <label>Estado:</label>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="estado"
-                                            id="estadoNuevo" value="1" required>
-                                        <label class="form-check-label" for="estadoNuevo">Nuevo</label>
-                                        <input class="form-check-input ml-5" type="radio"
-                                            name="estado" id="estadoUsado" value="2" required>
-                                        <label class="form-check-label" for="estadoUsado">Usado</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--marca-->
-                            <div class="form-group row">
-                                <label for="marca" class="col-3 col-sm-2 col-form-label">Marca: </label>
-                                <div class="col-9 col-sm-10">
-                                    <input type="text" class="form-control" id="marca" required/>
-                                </div>
-                            </div>
-                            <!--modelo-->
-                            <div class="form-group row"><label class="col-3 col-sm-2 col-form-label" for="modelo">Modelo:
-                                </label>
-                                <div class="col-9 col-sm-10">
-                                    <input type="text" class="form-control" id="modelo" required/> 
-                                </div>
-                            </div>
-                            <!--pantalla-->
-                            <div class="form-group row"><label class="col-3 col-sm-2 col-form-label" for="pantalla">Pantalla:
-                                </label>
-                                <div class="col-9 col-sm-10">
-                                    <input type="number" class="form-control" id="pantalla" required/> </div>
-                            </div>
-                            <!--sistema-->
-                            <div class="form-group row"><label class="col-3 col-sm-2 col-form-label" for="sistema">Sistema:
-                                </label>
-                                <div class="col-9 col-sm-10">
-                                    <select class="custom-select w-50" id="sistema" >
-                                        <optgroup label="Sistema" >
-                                            <option value="ios">Ios</option>
-                                            <option value="android">Android</option>
-                                            <option value="windows">Windows</option>
-                                        </optgroup>
-                                    </select> </div>
-                            </div>
-                            <!--ram-->
-                            <div class="form-group row"><label class="col-3 col-sm-2 col-form-label" for="ram">RAM(GB):</label>
-                                <div class="col-9 col-sm-10">
-                                    <input type="number" class="form-control" id="ram" required/> </div>
-                            </div>
-                            <!--rom-->
-                            <div class="form-group row"><label class="col-3 col-sm-2 col-form-label" for="rom">ROM(GB):</label>
-                                <div class="col-9 col-sm-10">
-                                    <input type="number" class="form-control" id="rom" required/> </div>
-                            </div>
-
-
-                        </div>
-                        <!--form datos del vendedor-->
-                        <div class="col-12 col-lg-6 order-2 order-lg-2   p-md-4">
-                            <!--titulo-->
-                            <div class="form-group ">
-                                <label for="titulo">Título breve del anuncio:</label><input type="text"
-                                    class="form-control" id="titulo" required/>
-                            </div>
-                            <!--vendedor-->
-                            <div class="form-group row">
-                                <label for="vendedor" class="col-3 col-sm-2 col-form-label">Vendedor: </label>
-                                <div class="col-9 col-sm-10">
-                                    <input type="text" class="form-control" id="vendedor" required/>
-                                </div>
-                            </div>
-                            <!--telefono-->
-                            <div class="form-group row"><label class="col-3 col-sm-2 col-form-label" for="telefono">Telefono:
-                                </label>
-                                <div class="col-9 col-sm-10">
-                                    <input type="number" class="form-control" id="telefono" required/> </div>
-                            </div>
-                            <!--descripcion-->
-                            <div class="form-group">
-                                <label for="descripcion">Descripción:</label><textarea class="form-control"
-                                    id="descripcion" placeholder="escriba aqui..." required></textarea>
-                            </div>
-                            <div class="form-group w-50">
-                                <label for="Precio">Precio: </label><input type="number" class="form-control"
-                                    id="precio" placeholder="$" required/>
-                            </div>
-
-
-
-                        </div>
-
-
-                        <!--form imagenes-->
-                        <div class="col-12 col-lg-7 order-1 order-lg-3 p-lg-4  rounded ">
-                        <!--agregar imagenes en pc-->
-                            <div class="row d-none d-sm-flex">
-                                <div class="col-12">
-                                    <p class="h3"> Imágenes</p>
-                                </div>
-                                <div class="col-2 align-self-center">
-                                   
-                                    <a class="btn" onclick=""><i class="fa fa-plus-circle" style="font-size: 40px;"></i></a>
-                                    <a class="btn" onclick=""><i class="fa fa-minus-circle" style="font-size: 40px;"></i></a>
-                                </div>
-                                <div class="col-5 align-self-center">
-                                    <table class="table table-sm">
-                                        <thead>
-                                          <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Tamaño</th>
-                                            <th scope="col">jpg</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <th scope="row">1</th>
-                                            <td>140KB</td>
-                                            <td>png</td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">2</th>
-                                            <td>140KB</td>
-                                            <td>png</td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">3</th>
-                                            <td >140KB</td>
-                                            <td>jpg</td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                </div>
-                                <div class="col-5">
-                                    <img src="assets/img/j6.png" class="img-thumbnail" alt="miniatura">
-                                </div>
-                            </div>
-                            
-                            <!--agregar imagenes en movil-->
-                            <div class="row d-sm-none">
-                                <div class="col-12">
-                                    <p class="h3"> Imágenes</p>
-                                    <div id="carouselAgregarImagenes" class="carousel slide" data-ride="carousel" >
-                                        <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                                            <div class="carousel-item active">
-                                                <img class="img-fluid mx-auto d-block" src="assets/img/image.png" alt="slide 1">
-                                                <div class="carousel-caption">
-                                                    <a class="btn mb-5 " onclick=""><i class="fa fa-plus-circle" style="font-size: 60px; color: #000;"></i></a>
-                                                    <p class=" h3 text-dark">Agregar foto</p>
-                                                  </div>
-                                            </div>
-                                            <div class="carousel-item" id="eliminar">
-                                                <img class="img-fluid mx-auto d-block" src="assets/img/image.png" alt="slide 1">
-                                                <div class="carousel-caption">
-                                                    <a class="btn mb-5 " onclick=""><i class="fa fa-plus-circle" style="font-size: 60px; color: #000;"></i></a>
-                                                    <p class=" h3 text-dark">Agregar foto</p>
-                                                  </div>
+        </nav>
+        <!--toast nuevo anuncio-->
+        <div id="toastAnuncio" class="toast  collapse" data-autohide="true" data-delay="1500"
+            style="position: fixed; top:4rem; right:1rem;z-index: 1500; min-width: 5rem;">
+            <div class="toast-header bg-primary text-white">
+                <img src="assets/img/notificacion.png" class="rounded mr-2 " alt="...">
+                <strong class="mr-auto">Notificacion</strong>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                <strong>Anuncio añadido con exito</strong>
+            </div>
+        </div>
+        <!--modal niuevo anuncio-->
+        <div role="dialog" tabindex="-1" class="modal fade " id="modalNuevoAnuncio">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Nuevo Anuncio</h4><button type="button" class="close"
+                            data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body bg-light">
+                        <form class="was-validated" novalidate>
+                            <!--row padre-->
+                            <div class="form-row">
+                                <!--form de estado del telefono-->
+                                <div class="col-12 col-lg-6 order-3 order-lg-1 order- p-md-4 ">
+                                    <!--checkbox sin formgroup-->
+                                    <div class="row my-2 form-group ">
+                                        <div class="col-4 col-md-3">
+                                            <label>Estado:</label>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="estado"
+                                                    id="estadoNuevo" value="1" required>
+                                                <label class="form-check-label" for="estadoNuevo">Nuevo</label>
+                                                <input class="form-check-input ml-5" type="radio" name="estado"
+                                                    id="estadoUsado" value="2" required>
+                                                <label class="form-check-label" for="estadoUsado">Usado</label>
                                             </div>
                                         </div>
-                                        <a class="carousel-control-prev" href="#carouselAgregarImagenes" role="button" data-slide="prev">
-                                            <i style="color:#000; text-decoration: none;" class="fa fa-chevron-circle-left fa-2x"></i>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next text-faded" href="#carouselAgregarImagenes" role="button" data-slide="next">
-                                            <i style="color:#000; text-decoration: none;" class="fa fa-chevron-circle-right fa-2x"></i>
-                                            <span class="sr-only">Next</span>
-                                        </a>
+                                    </div>
+                                    <!--marca-->
+                                    <div class="form-group row">
+                                        <label for="marca" class="col-3 col-sm-2 col-form-label">Marca: </label>
+                                        <div class="col-9 col-sm-10">
+                                            <input type="text" class="form-control" id="marca" required />
+                                        </div>
+                                    </div>
+                                    <!--modelo-->
+                                    <div class="form-group row"><label class="col-3 col-sm-2 col-form-label"
+                                            for="modelo">Modelo:
+                                        </label>
+                                        <div class="col-9 col-sm-10">
+                                            <input type="text" class="form-control" id="modelo" required />
+                                        </div>
+                                    </div>
+                                    <!--pantalla-->
+                                    <div class="form-group row"><label class="col-3 col-sm-2 col-form-label"
+                                            for="pantalla">Pantalla:
+                                        </label>
+                                        <div class="col-9 col-sm-10">
+                                            <input type="number" class="form-control" id="pantalla" required /> </div>
+                                    </div>
+                                    <!--sistema-->
+                                    <div class="form-group row"><label class="col-3 col-sm-2 col-form-label"
+                                            for="sistema">Sistema:
+                                        </label>
+                                        <div class="col-9 col-sm-10">
+                                            <select class="custom-select w-50" id="sistema">
+                                                <optgroup label="Sistema">
+                                                    <option value="ios">Ios</option>
+                                                    <option value="android">Android</option>
+                                                    <option value="windows">Windows</option>
+                                                </optgroup>
+                                            </select> </div>
+                                    </div>
+                                    <!--ram-->
+                                    <div class="form-group row"><label class="col-3 col-sm-2 col-form-label"
+                                            for="ram">RAM(GB):</label>
+                                        <div class="col-9 col-sm-10">
+                                            <input type="number" class="form-control" id="ram" required /> </div>
+                                    </div>
+                                    <!--rom-->
+                                    <div class="form-group row"><label class="col-3 col-sm-2 col-form-label"
+                                            for="rom">ROM(GB):</label>
+                                        <div class="col-9 col-sm-10">
+                                            <input type="number" class="form-control" id="rom" required /> </div>
+                                    </div>
+
+
+                                </div>
+                                <!--form datos del vendedor-->
+                                <div class="col-12 col-lg-6 order-2 order-lg-2   p-md-4">
+                                    <!--titulo-->
+                                    <div class="form-group ">
+                                        <label for="titulo">Título breve del anuncio:</label><input type="text"
+                                            class="form-control" id="titulo" required />
+                                    </div>
+                                    <!--vendedor-->
+                                    <div class="form-group row">
+                                        <label for="vendedor" class="col-3 col-sm-2 col-form-label">Vendedor: </label>
+                                        <div class="col-9 col-sm-10">
+                                            <input type="text" class="form-control" id="vendedor" required />
+                                        </div>
+                                    </div>
+                                    <!--telefono-->
+                                    <div class="form-group row"><label class="col-3 col-sm-2 col-form-label"
+                                            for="telefono">Telefono:
+                                        </label>
+                                        <div class="col-9 col-sm-10">
+                                            <input type="number" class="form-control" id="telefono" required /> </div>
+                                    </div>
+                                    <!--descripcion-->
+                                    <div class="form-group">
+                                        <label for="descripcion">Descripción:</label><textarea class="form-control"
+                                            id="descripcion" placeholder="escriba aqui..." required></textarea>
+                                    </div>
+                                    <div class="form-group w-50">
+                                        <label for="Precio">Precio: </label><input type="number" class="form-control"
+                                            id="precio" placeholder="$" required />
+                                    </div>
+
+
+
+                                </div>
+
+
+                                <!--form imagenes-->
+                                <div class="col-12 col-lg-7 order-1 order-lg-3 p-lg-4  rounded ">
+                                    <!--agregar imagenes en pc-->
+                                    <div class="row d-none d-sm-flex">
+                                        <div class="col-12">
+                                            <p class="h3"> Imágenes</p>
+                                        </div>
+                                        <div class="col-2 align-self-center">
+
+                                            <a class="btn" onclick=""><i class="fa fa-plus-circle"
+                                                    style="font-size: 40px;"></i></a>
+                                            <a class="btn" onclick=""><i class="fa fa-minus-circle"
+                                                    style="font-size: 40px;"></i></a>
+                                        </div>
+                                        <div class="col-5 align-self-center">
+                                            <table class="table table-sm">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Tamaño</th>
+                                                        <th scope="col">jpg</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>140KB</td>
+                                                        <td>png</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>140KB</td>
+                                                        <td>png</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>140KB</td>
+                                                        <td>jpg</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-5">
+                                            <img src="assets/img/j6.png" class="img-thumbnail" alt="miniatura">
+                                        </div>
+                                    </div>
+
+                                    <!--agregar imagenes en movil-->
+                                    <div class="row d-sm-none">
+                                        <div class="col-12">
+                                            <p class="h3"> Imágenes</p>
+                                            <div id="carouselAgregarImagenes" class="carousel slide"
+                                                data-ride="carousel">
+                                                <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                                                    <div class="carousel-item active">
+                                                        <img class="img-fluid mx-auto d-block"
+                                                            src="assets/img/image.png" alt="slide 1">
+                                                        <div class="carousel-caption">
+                                                            <a class="btn mb-5 " onclick=""><i class="fa fa-plus-circle"
+                                                                    style="font-size: 60px; color: #000;"></i></a>
+                                                            <p class=" h3 text-dark">Agregar foto</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item" id="eliminar">
+                                                        <img class="img-fluid mx-auto d-block"
+                                                            src="assets/img/image.png" alt="slide 1">
+                                                        <div class="carousel-caption">
+                                                            <a class="btn mb-5 " onclick=""><i class="fa fa-plus-circle"
+                                                                    style="font-size: 60px; color: #000;"></i></a>
+                                                            <p class=" h3 text-dark">Agregar foto</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="carousel-control-prev" href="#carouselAgregarImagenes"
+                                                    role="button" data-slide="prev">
+                                                    <i style="color:#000; text-decoration: none;"
+                                                        class="fa fa-chevron-circle-left fa-2x"></i>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next text-faded"
+                                                    href="#carouselAgregarImagenes" role="button" data-slide="next">
+                                                    <i style="color:#000; text-decoration: none;"
+                                                        class="fa fa-chevron-circle-right fa-2x"></i>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <!--form botones de guardar y cancelar-->
+                                <div
+                                    class="col-12 col-lg-5 p-lg-4 order-4 order-lg-4 align-self-center text-center  rounded ">
+                                    <button class="btn btn-outline-danger btn-lg mr-2" type="button"
+                                        data-dismiss="modal"><i class="fa fa-close mr-1"></i>Cancelar</button>
+                                    <button class="btn btn-outline-success btn-lg" type="button" data-dismiss="modal"
+                                        onclick="alertaAnuncioAdd();"><i class="fa fa-save mr-1"></i>Crear</button>
+                                </div>
                             </div>
-                        </div>
-                        <!--form botones de guardar y cancelar-->
-                        <div class="col-12 col-lg-5 p-lg-4 order-4 order-lg-4 align-self-center text-center  rounded ">
-                            <button class="btn btn-outline-danger btn-lg mr-2" type="button" data-dismiss="modal"><i class="fa fa-close mr-1" ></i>Cancelar</button>
-                            <button class="btn btn-outline-success btn-lg" type="button"  data-dismiss="modal" onclick="alertaAnuncioAdd();"><i class="fa fa-save mr-1" ></i>Crear</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <p>Utilizar informacion real.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--contenido principal-->
+        <main class="container mt-5 py-5 bg-light">
+            <div class="row row-cols-1 row-cols-md-2">
+                <!--grafica 1-->
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body shadow-sm">
+                            <h4 class="text-center card-title">Top ventas del dia</h4><canvas id="MasVendidosDia"
+                                style="max-width: 1000px;"></canvas>
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <p>Utilizar informacion real.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-          form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-    </script>
-    <main class="container mt-5 py-5 bg-light">
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col mt-3">
-                <div class="card">
-                    <div class="card-body shadow-sm">
-                        <h4 class="text-center card-title">Top ventas del dia</h4><canvas id="MasVendidosDia" style="max-width: 1000px;"></canvas>
-
-
-
-</div>
+                </div>
+                <!--grafica 2-->
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body shadow-sm">
+                            <h4 class="text-center card-title">Venta por precios</h4><canvas id="masCaros"
+                                style="max-width: 1000px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!--grafica 3-->
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body shadow-sm">
+                            <h4 class="text-center card-title">Marcas mas vendidas</h4><canvas id="mejorPuntuados"
+                                style="max-width: 1000px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!--grafica 4-->
+                <div class="col mt-3">
+                    <div class="card">
+                        <div class="card-body shadow-sm">
+                            <h4 class="text-center card-title">Categorias destacadas</h4><canvas
+                                id="categoriasDestacadas" style="max-width: 1000px;"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col mt-3">
-                <div class="card">
-                    <div class="card-body shadow-sm">
-                        <h4 class="text-center card-title">Venta por precios</h4><canvas id="masCaros" style="max-width: 1000px;"></canvas>
-
-
-
-</div>
+        </main>
+        <!--footer-->
+        <footer class="container-fluid">
+            <div class="row text-center justify-content-center row-cols-md-3 bg-dark row-cols-1">
+                <div class="col align-self-center p-1 p-md-2">
+                    <p class="text-light" style="font-weight: bold;font-size: 0.8rem;">Desarrollador</p>
+                    <p class="text-light" style="font-size: 0.8rem;">Marlon Wilfredo Guerra Ramirez GR18045</p>
+                </div>
+                <div class="col align-self-center p-0 p-md-2">
+                    <p class="text-light" style="font-weight: bold;font-size: 0.8rem;">Redes sociales</p><a
+                        class="btn btn-primary rounded-circle mr-1" role="button"
+                        href="https://www.facebook.com/wil.guerra.739/" target="_blank"><i class="fa fa-facebook-square"
+                            style="font-size: 0.8rem;"></i></a><a class="btn btn-primary rounded-circle mr-1"
+                        role="button" href="https://twitter.com/Marlon_Guerra56" target="_blank"><i
+                            class="fa fa-twitter" style="font-size: 0.8rem;"></i></a><a
+                        class="btn btn-primary rounded-circle mr-1" role="button"
+                        href="https://www.instagram.com/marlonn.guerra/" target="_blank"><i class="fa fa-instagram"
+                            style="font-size: 0.8rem;"></i></a><a class="btn btn-primary rounded-circle mr-1"
+                        role="button" href="https://www.youtube.com/channel/UCzC93Oe5wIre94slzot7OgQ?view_as=subscriber"
+                        target="_blank"><i class="fa fa-youtube-play" style="font-size: 0.8rem;"></i></a>
+                </div>
+                <div class="col align-self-center p-0 p-md-2">
+                    <p class="text-light" style="font-weight: bold;font-size: 0.8rem;">Sobre mi</p>
+                    <p class="text-light" style="font-size: 0.8rem;">Estudiante UES FMOcc FPI-2020</p>
                 </div>
             </div>
-            <div class="col mt-3">
-                <div class="card">
-                    <div class="card-body shadow-sm">
-                        <h4 class="text-center card-title">Marcas mas vendidas</h4><canvas id="mejorPuntuados" style="max-width: 1000px;"></canvas>
+        </footer>
 
-
-
-</div>
-                </div>
-            </div>
-            <div class="col mt-3">
-                <div class="card">
-                    <div class="card-body shadow-sm">
-                        <h4 class="text-center card-title">Categorias destacadas</h4><canvas id="categoriasDestacadas" style="max-width: 1000px;"></canvas>
-
-
-
-
-
-</div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer class="container-fluid">
-        <div class="row text-center justify-content-center row-cols-md-3 bg-dark row-cols-1">
-            <div class="col align-self-center p-1 p-md-2">
-                <p class="text-light" style="font-weight: bold;font-size: 0.8rem;">Desarrollador</p>
-                <p class="text-light" style="font-size: 0.8rem;">Marlon Wilfredo Guerra Ramirez GR18045</p>
-            </div>
-            <div class="col align-self-center p-0 p-md-2">
-                <p class="text-light" style="font-weight: bold;font-size: 0.8rem;">Redes sociales</p><a class="btn btn-primary rounded-circle mr-1" role="button" href="https://www.facebook.com/wil.guerra.739/" target="_blank"><i class="fa fa-facebook-square" style="font-size: 0.8rem;"></i></a><a class="btn btn-primary rounded-circle mr-1"
-                    role="button" href="https://twitter.com/Marlon_Guerra56" target="_blank"><i class="fa fa-twitter" style="font-size: 0.8rem;"></i></a><a class="btn btn-primary rounded-circle mr-1" role="button" href="https://www.instagram.com/marlonn.guerra/"
-                    target="_blank"><i class="fa fa-instagram" style="font-size: 0.8rem;"></i></a><a class="btn btn-primary rounded-circle mr-1" role="button" href="https://www.youtube.com/channel/UCzC93Oe5wIre94slzot7OgQ?view_as=subscriber" target="_blank"><i class="fa fa-youtube-play" style="font-size: 0.8rem;"></i></a></div>
-            <div
-                class="col align-self-center p-0 p-md-2">
-                <p class="text-light" style="font-weight: bold;font-size: 0.8rem;">Sobre mi</p>
-                <p class="text-light" style="font-size: 0.8rem;">Estudiante UES FMOcc FPI-2020</p>
-        </div>
-        </div>
-    </footer>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/Chart.min.js"></script>
-    <script src="assets/js/scriptsGraficas.js"></script>
-    <script src="assets/js/toasts.js"></script>
-</body>
-
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/Chart.min.js"></script>
+        <script src="assets/js/scriptsGraficas.js"></script>
+        <script src="assets/js/toasts.js"></script>
+        <!--Script de validacion de formularios-->
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict';
+                window.addEventListener('load', function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
+    </body>
 </html>
