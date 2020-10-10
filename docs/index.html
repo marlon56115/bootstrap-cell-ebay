@@ -15,9 +15,12 @@
     <body>
         <!--Navegacion-->
         <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-dark bg-dark" id="navegacion">
-            <div class="container-fluid"><button data-toggle="collapse" class="navbar-toggler"
-                    data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
-                        class="navbar-toggler-icon"></span></button><i class="fab fa-android d-none d-lg-inline mr-2"
+            <div class="container-fluid">
+                <button data-toggle="collapse" class="navbar-toggler"
+                    data-target="#menuNavegacion"><span class="sr-only">Toggle navigation</span><span
+                        class="navbar-toggler-icon"></span>
+                </button>
+                <i class="fab fa-android d-none d-lg-inline mr-2"
                     style="font-size: 33px;color: rgb(154,157,160);"></i>
                 <a class="navbar-brand d-none d-lg-inline" href="index.html">Tienda&nbsp; CellPhone</a>
                 <form class="form-inline">
@@ -27,8 +30,8 @@
                             type="search" placeholder="Buscar">
                     </div>
                 </form>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav ml-auto">
+                <div class="collapse navbar-collapse" id="menuNavegacion">
+                    <ul class="nav navbar-nav ml-auto" data-toggle="collapse" data-target="#menuNavegacion">
                         <li class="nav-item my-auto mx-md-3 d-sm-inline d-md-none" style="text-align: center;"><i
                                 class="fab fa-android d-lg-none mr-1"
                                 style="font-size: 25px;color: rgb(154,157,160);"></i><a class="navbar-brand d-lg-none"
@@ -309,7 +312,8 @@
         <main id="principal" class="container-fluid bg-light pt-4 mt-5">
             <div class="row">
                 <!--select que se muestra en movil-->
-                <div class="col align-self-center col-6 d-lg-none" id="filtrosComboBox"><label
+                <div class="col col-6 d-lg-none text-right" id="filtrosComboBox">
+                    <label
                         style="font-size: 13px;">Ordenar por:&nbsp;</label><select class="custom-select w-50 mx-auto">
                         <optgroup label="Ordenar">
                             <option value="Precio" selected="">Precio</option>
@@ -318,7 +322,7 @@
                     </select>
                 </div>
                 <!--filtros ordenar por precio y por fecha-->
-                <div class="col offset-3 align-self-center col-lg-9 d-none d-lg-inline" id="ordenPrecio">
+                <div class="col offset-3 col-lg-9 d-none d-lg-inline" id="ordenPrecio">
                     <form class="form-inline">
                         <div class="form-row row-cols-3">
                             <div class="col" id="precioDesde">
@@ -345,12 +349,16 @@
                             type="button"><i class="fa fa-calendar-times-o"></i>&nbsp;Fecha</button>
                     </form>
                 </div>
+
                 <!--filtros laterales-->
-                <div class="col col-6 col-lg-2 rounded" id="filtros">
-                    <!--filtros colapsables-->
-                    <div><a class="btn btn-dark d-lg-none" data-toggle="collapse" aria-expanded="false"
-                            aria-controls="collapse-1" href="#collapse-1" role="button"><i class="fa fa-filter"></i></a>
-                        <div class="collapse d-lg-block" id="collapse-1">
+                <div class="col col-6 col-lg-2 rounded " id="filtros">
+
+                    <!--boton para descolapsar productos-->
+                    <a class="btn btn-dark d-lg-none " data-toggle="collapse" aria-expanded="false"
+                            aria-controls="collapse-1" href="#filtrosColapsable" role="button"><i class="fa fa-filter"></i></a>
+
+                     <!--filtros colapsables-->
+                        <div class="collapse d-lg-block" id="filtrosColapsable">
                             <div class="col">
                                 <div class="row row-cols-1">
                                     <div class="col border rounded bg-white" id="nuevo" style="text-align: center;">
@@ -411,8 +419,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
+
                 <!--todos los productos-->
                 <div class="col col-12 col-lg-10 rounded" id="productos">
                     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-2">
@@ -724,6 +732,7 @@
                 </div>
             </div>
         </main>
+
         <!--paginador-->
         <div class="container-fluid">
             <div class="row justify-content-center ml-1 my-4">
@@ -756,6 +765,7 @@
                     </select></div>
             </div>
         </div>
+
         <!--footer-->
         <footer class="container-fluid">
             <div class="row text-center justify-content-center row-cols-md-3 bg-dark row-cols-1">
@@ -808,6 +818,9 @@
                 }, false);
             })();
         </script>
+
     </body>
+
+    <!--Marlon Wilfredo Guerra Ramirez GR18045-->
 
 </html>

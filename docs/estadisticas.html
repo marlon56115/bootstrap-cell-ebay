@@ -13,11 +13,15 @@
     </head>
 
     <body>
+
         <!--barra de navegacion-->
         <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-dark bg-dark" id="navegacion">
-            <div class="container-fluid"><button data-toggle="collapse" class="navbar-toggler"
-                    data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
-                        class="navbar-toggler-icon"></span></button><i class="fab fa-android d-none d-lg-inline mr-2"
+            <div class="container-fluid">
+                <button data-toggle="collapse" class="navbar-toggler"
+                    data-target="#menuNavegacion"><span class="sr-only">Toggle navigation</span><span
+                        class="navbar-toggler-icon"></span>
+                </button>
+                <i class="fab fa-android d-none d-lg-inline mr-2"
                     style="font-size: 33px;color: rgb(154,157,160);"></i>
                 <a class="navbar-brand d-none d-lg-inline" href="index.html">Tienda&nbsp; CellPhone</a>
                 <form class="form-inline">
@@ -27,8 +31,8 @@
                             type="search" placeholder="Buscar">
                     </div>
                 </form>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav ml-auto">
+                <div class="collapse navbar-collapse" id="menuNavegacion">
+                    <ul class="nav navbar-nav ml-auto" data-toggle="collapse" data-target="#menuNavegacion">
                         <li class="nav-item my-auto mx-md-3 d-sm-inline d-md-none" style="text-align: center;"><i
                                 class="fab fa-android d-lg-none mr-1"
                                 style="font-size: 25px;color: rgb(154,157,160);"></i><a class="navbar-brand d-lg-none"
@@ -39,8 +43,7 @@
                                 href="estadisticas.html">Estadisticas</a></li>
                         <li class="nav-item mx-md-3 mx-lg-3 my-auto" style="text-align: center;"><a
                                 class="nav-link d-none d-md-inline " onclick="$('#modalNuevoAnuncio').modal('show');"><i
-                                    class="fa fa-plus-circle" style="font-size: 35px;"></i>
-                            </a>
+                                    class="fa fa-plus-circle" style="font-size: 35px;"></i></a>
 
                             <a class="nav-link d-md-none text-light" onclick="$('#modalNuevoAnuncio').modal('show');">
                                 Nuevo Anuncio
@@ -181,11 +184,7 @@
                                         <label for="Precio">Precio: </label><input type="number" class="form-control"
                                             id="precio" placeholder="$" required />
                                     </div>
-
-
-
                                 </div>
-
 
                                 <!--form imagenes-->
                                 <div class="col-12 col-lg-7 order-1 order-lg-3 p-lg-4  rounded ">
@@ -297,6 +296,7 @@
         <!--contenido principal-->
         <main class="container mt-5 py-5 bg-light">
             <div class="row row-cols-1 row-cols-md-2">
+                
                 <!--grafica 1-->
                 <div class="col mt-3">
                     <div class="card">
@@ -306,6 +306,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!--grafica 2-->
                 <div class="col mt-3">
                     <div class="card">
@@ -315,6 +316,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!--grafica 3-->
                 <div class="col mt-3">
                     <div class="card">
@@ -324,6 +326,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!--grafica 4-->
                 <div class="col mt-3">
                     <div class="card">
@@ -335,6 +338,7 @@
                 </div>
             </div>
         </main>
+
         <!--footer-->
         <footer class="container-fluid">
             <div class="row text-center justify-content-center row-cols-md-3 bg-dark row-cols-1">
@@ -367,6 +371,7 @@
         <script src="assets/js/Chart.min.js"></script>
         <script src="assets/js/scriptsGraficas.js"></script>
         <script src="assets/js/toasts.js"></script>
+
         <!--Script de validacion de formularios-->
         <script>
             // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -388,5 +393,9 @@
                 }, false);
             })();
         </script>
+
     </body>
+
+    <!--Marlon Wilfredo Guerra Ramirez GR18045-->
+
 </html>

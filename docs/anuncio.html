@@ -15,9 +15,12 @@
     <body>
         <!--navegacion-->
         <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-dark bg-dark" id="navegacion">
-            <div class="container-fluid"><button data-toggle="collapse" class="navbar-toggler"
-                    data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
-                        class="navbar-toggler-icon"></span></button><i class="fab fa-android d-none d-lg-inline mr-2"
+            <div class="container-fluid">
+                <button data-toggle="collapse" class="navbar-toggler"
+                    data-target="#menuNavegacion"><span class="sr-only">Toggle navigation</span><span
+                        class="navbar-toggler-icon"></span>
+                </button>
+                <i class="fab fa-android d-none d-lg-inline mr-2"
                     style="font-size: 33px;color: rgb(154,157,160);"></i>
                 <a class="navbar-brand d-none d-lg-inline" href="index.html">Tienda&nbsp; CellPhone</a>
                 <form class="form-inline">
@@ -27,8 +30,8 @@
                             type="search" placeholder="Buscar">
                     </div>
                 </form>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav ml-auto">
+                <div class="collapse navbar-collapse" id="menuNavegacion">
+                    <ul class="nav navbar-nav ml-auto" data-toggle="collapse" data-target="#menuNavegacion">
                         <li class="nav-item my-auto mx-md-3 d-sm-inline d-md-none" style="text-align: center;"><i
                                 class="fab fa-android d-lg-none mr-1"
                                 style="font-size: 25px;color: rgb(154,157,160);"></i><a class="navbar-brand d-lg-none"
@@ -39,8 +42,7 @@
                                 href="estadisticas.html">Estadisticas</a></li>
                         <li class="nav-item mx-md-3 mx-lg-3 my-auto" style="text-align: center;"><a
                                 class="nav-link d-none d-md-inline " onclick="$('#modalNuevoAnuncio').modal('show');"><i
-                                    class="fa fa-plus-circle" style="font-size: 35px;"></i>
-                            </a>
+                                    class="fa fa-plus-circle" style="font-size: 35px;"></i></a>
 
                             <a class="nav-link d-md-none text-light" onclick="$('#modalNuevoAnuncio').modal('show');">
                                 Nuevo Anuncio
@@ -57,6 +59,7 @@
                 </div>
             </div>
         </nav>
+
         <!--modal nuevo anuncio-->
         <div role="dialog" tabindex="-1" class="modal fade " id="modalNuevoAnuncio">
             <div class="modal-dialog modal-xl" role="document">
@@ -67,10 +70,13 @@
                     </div>
                     <div class="modal-body bg-light">
                         <form class="was-validated" novalidate>
+
                             <!--row padre-->
                             <div class="form-row">
+
                                 <!--form de estado del telefono-->
                                 <div class="col-12 col-lg-6 order-3 order-lg-1 order- p-md-4 ">
+
                                     <!--checkbox sin formgroup-->
                                     <div class="row my-2 form-group ">
                                         <div class="col-4 col-md-3">
@@ -167,9 +173,6 @@
                                         <label for="Precio">Precio: </label><input type="number" class="form-control"
                                             id="precio" placeholder="$" required />
                                     </div>
-
-
-
                                 </div>
 
 
@@ -298,6 +301,7 @@
         <!--contenido principal-->
         <main class="container bg-light py-5 rounded mt-5">
             <div class="row" id="telefono">
+
                 <!--carrusel-->
                 <div class="col col-md-6 col-12" id="carrusel">
                     <div class="carousel slide" data-ride="carousel" id="carousel-1">
@@ -328,6 +332,7 @@
                         </ol>
                     </div>
                 </div>
+
                 <!--informacion de venta-->
                 <div class="col align-self-center col-12 col-md-6" id="informacion">
                     <div class="card">
@@ -347,6 +352,7 @@
                     </div>
                 </div>
             </div>
+
             <!--row de titulo-->
             <div class="row text-center my-3" id="descripcion">
                 <div class="col d-none d-lg-block">
@@ -355,6 +361,7 @@
             </div>
 
             <div class="row" id="infoGeneral">
+
                 <!--especificaciones-->
                 <div class="col col-md-6 col-12">
                     <ul class="list-group list-group-flush border rounded">
@@ -367,6 +374,7 @@
                         <li class="list-group-item"><span>RAM: 6GB</span></li>
                     </ul>
                 </div>
+
                 <!--caracteristicas-->
                 <div class="col col-md-6 col-12">
                     <div class="card">
@@ -442,6 +450,9 @@
                 }, false);
             })();
         </script>
+
     </body>
+
+     <!--Marlon Wilfredo Guerra Ramirez GR18045-->
 
 </html>
